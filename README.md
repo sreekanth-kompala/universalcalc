@@ -4,7 +4,7 @@ Node.js v21+
 
 npm v10+
 
-Dependencies
+Dependencies:
 npm install 
 
 Key libraries used:
