@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f1f5f9" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="UniversalCalc" />
+    <meta name="description" content="A cross-platform styled web app combining a high-precision calculator, comprehensive unit conversion, and live currency exchange rates." />
+    
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- App Icon: High-fidelity SVG recreation of UniCalcAppIcon.png -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%234F46E5'/%3E%3C/linearGradient%3E%3Cfilter id='btnShdw' x='-20%25' y='-10%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur in='SourceAlpha' stdDeviation='8'/%3E%3CfeOffset dx='0' dy='8' result='offsetblur'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.3'/%3E%3C/feComponentTransfer%3E%3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Crect width='512' height='512' rx='128' fill='url(%23bgGrad)'/%3E%3Crect x='64' y='64' width='384' height='384' rx='90' fill='%231E1B4B'/%3E%3Cg filter='url(%23btnShdw)'%3E%3Crect x='102' y='102' width='144' height='144' rx='45' fill='%23F5F3FF'/%3E%3Cpath d='M174 134v80M134 174h80' stroke='%23A855F7' stroke-width='24' stroke-linecap='round'/%3E%3Crect x='266' y='102' width='144' height='144' rx='45' fill='%236366F1'/%3E%3Cpath d='M310 146l56 56M366 146l-56 56' stroke='white' stroke-width='24' stroke-linecap='round'/%3E%3Crect x='102' y='266' width='144' height='144' rx='45' fill='%233B82F6'/%3E%3Cpath d='M140 338h68M174 308v4' stroke='white' stroke-width='24' stroke-linecap='round'/%3E%3Ccircle cx='174' cy='314' r='8' fill='white'/%3E%3Ccircle cx='174' cy='362' r='8' fill='white'/%3E%3Crect x='266' y='266' width='144' height='144' rx='45' fill='%23FBBF24'/%3E%3Cpath d='M305 328h66M305 348h66' stroke='%23EA580C' stroke-width='24' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E" />
+    <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cdefs%3E%3ClinearGradient id='bgGrad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%238B5CF6'/%3E%3Cstop offset='100%25' stop-color='%234F46E5'/%3E%3C/linearGradient%3E%3Cfilter id='btnShdw' x='-20%25' y='-10%25' width='140%25' height='140%25'%3E%3CfeGaussianBlur in='SourceAlpha' stdDeviation='8'/%3E%3CfeOffset dx='0' dy='8' result='offsetblur'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.3'/%3E%3C/feComponentTransfer%3E%3CfeMerge%3E%3CfeMergeNode/%3E%3CfeMergeNode in='SourceGraphic'/%3E%3C/feMerge%3E%3C/filter%3E%3C/defs%3E%3Crect width='512' height='512' rx='128' fill='url(%23bgGrad)'/%3E%3Crect x='64' y='64' width='384' height='384' rx='90' fill='%231E1B4B'/%3E%3Cg filter='url(%23btnShdw)'%3E%3Crect x='102' y='102' width='144' height='144' rx='45' fill='%23F5F3FF'/%3E%3Cpath d='M174 134v80M134 174h80' stroke='%23A855F7' stroke-width='24' stroke-linecap='round'/%3E%3Crect x='266' y='102' width='144' height='144' rx='45' fill='%236366F1'/%3E%3Cpath d='M310 146l56 56M366 146l-56 56' stroke='white' stroke-width='24' stroke-linecap='round'/%3E%3Crect x='102' y='266' width='144' height='144' rx='45' fill='%233B82F6'/%3E%3Cpath d='M140 338h68M174 308v4' stroke='white' stroke-width='24' stroke-linecap='round'/%3E%3Ccircle cx='174' cy='314' r='8' fill='white'/%3E%3Ccircle cx='174' cy='362' r='8' fill='white'/%3E%3Crect x='266' y='266' width='144' height='144' rx='45' fill='%23FBBF24'/%3E%3Cpath d='M305 328h66M305 348h66' stroke='%23EA580C' stroke-width='24' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E" />
+
+    <title>UniversalCalc</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+            },
+            colors: {
+              slate: {
+                850: '#151e2e',
+                950: '#020617',
+              }
+            },
+            spacing: {
+              'safe': 'env(safe-area-inset-bottom)',
+              'safe-top': 'env(safe-area-inset-top)',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body {
+        -webkit-tap-highlight-color: transparent;
+        overscroll-behavior-y: none;
+        overscroll-behavior-x: none;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+      }
+      input, textarea {
+        user-select: text;
+        -webkit-user-select: text;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+      .scrollbar-thin {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(148, 163, 184, 0.3) transparent;
+      }
+      .scrollbar-thin::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      .scrollbar-thin::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb {
+        background-color: rgba(148, 163, 184, 0.3);
+        border-radius: 10px;
+      }
+      .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(148, 163, 184, 0.5);
+      }
+      .dark .scrollbar-thin {
+        scrollbar-color: rgba(148, 163, 184, 0.2) transparent;
+      }
+      .dark .scrollbar-thin::-webkit-scrollbar-thumb {
+        background-color: rgba(148, 163, 184, 0.2);
+      }
+      .dark .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(148, 163, 184, 0.4);
+      }
+      .pb-safe {
+        padding-bottom: env(safe-area-inset-bottom, 20px);
+      }
+      .pt-safe {
+        padding-top: env(safe-area-inset-top, 20px);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "recharts": "https://esm.sh/recharts@^3.5.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "lucide-react": "https://esm.sh/lucide-react@^0.561.0",
+    "mathjs": "https://esm.sh/mathjs@^15.1.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100 dark:bg-slate-950 text-slate-900 dark:text-slate-100 h-screen w-screen overflow-hidden select-none font-sans transition-colors duration-200">
+    <div id="root" class="h-full w-full flex flex-col items-center justify-center"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

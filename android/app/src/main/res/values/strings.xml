@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">UniversalCalc</string>
+    <string name="title_activity_main">UniversalCalc</string>
+    <string name="package_name">com.universalcalc.app</string>
+    <string name="custom_url_scheme">com.universalcalc.app</string>
+</resources>

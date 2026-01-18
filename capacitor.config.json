@@ -1,0 +1,17 @@
+{
+  "appId": "com.universalcalc.app",
+  "appName": "UniversalCalc",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "AdMob": {
+      "androidAppId": "ca-app-pub-9976310659494116~6141142528",
+      "iosAppId": "ca-app-pub-3940256099942544~1458002511"
+    }
+  }
+}

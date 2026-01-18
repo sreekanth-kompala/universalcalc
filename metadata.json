@@ -1,0 +1,5 @@
+{
+  "name": "UniversalCalc",
+  "description": "A cross-platform styled web app combining a high-precision calculator, comprehensive unit conversion, and live currency exchange rates.",
+  "requestFramePermissions": []
+}
